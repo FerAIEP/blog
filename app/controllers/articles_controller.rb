@@ -1,4 +1,9 @@
 class ArticlesController < ApplicationController
+  def show
+    @article = Article.find(params[:id])
+    # #<Article:0x0013165465  title: "lfjsdkfjksd", text: "fñshñlkgjalfsdk">
+  end
+
   def new   
   end
 
