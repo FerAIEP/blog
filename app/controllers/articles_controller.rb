@@ -8,15 +8,18 @@ class ArticlesController < ApplicationController
     # #<Article:0x0013165465  title: "lfjsdkfjksd", text: "fñshñlkgjalfsdk">
   end
 
-  def new   
+  def new
+    @article = Article.new
   end
 
   def create
     @article = Article.new(article_params)
 
-    @article.save
-
-    redirect_to @article # es igual que poner redirect_to article_path(@article)
+    if @article.save
+     redirect_to article_path(@article)
+    else
+     render :new
+    end
   end
 
 private
