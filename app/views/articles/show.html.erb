@@ -1,8 +1,12 @@
 <h3>Detalle del articulo</h3>
-<p class="titulo"><strong id="resaltado">Titulo</strong></p>
+
+<%= image_tag('tu_imagen.jpg', width: '150px', height: '150px', class: 'rounded', alt: 'office') %>
+<%# Alojar las images dentro de app/assets/images/  %>
+
+<p><strong>Titulo</strong></p>
 <p><%= @article.title %></p>
 
-<p class="titulo"><strong>Texto</strong></p>
+<p><strong>Texto</strong></p>
 <p><%= @article.text %></p>
 
 <h2>Commentarios</h2>
