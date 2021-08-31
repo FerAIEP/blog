@@ -1,4 +1,3 @@
-<% @article.comments.each do |comment| %>
   <p>
     <strong>Commenter:</strong>
     <%= comment.commenter %>
@@ -12,5 +11,4 @@
   <%= link_to 'Borrar comentario', [comment.article, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
-</p>
-<% end %>
+  </p>
