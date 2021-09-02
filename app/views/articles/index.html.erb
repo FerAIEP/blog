@@ -3,7 +3,9 @@
     <% article_group.each do |article| %>
       <div class="col-4">
         <div class="card">
-          <%#= image_tag('office.jpg', class: 'card-img-top') %>
+          <% if article.photo.attached? %>
+            <%= image_tag(url_for(article.photo), width: 300, height: 300) %>
+          <% end %>
           <div class="card-body">
             <h5 class="card-title"><%= article.title %></h5>
             <p class="card-text"><%= article.text %></p>

@@ -22,6 +22,11 @@
     <%= form.label :text, "Texto", class: 'form-label' %>
     <%= form.text_area :text, class: 'form-control' %>
   </div>
+  <div class="mb-3">
+    <%= form.label :photo, "Texto", class: 'form-label' %>
+    <%= form.file_field :photo, class: 'form-control' %>
+  </div>
+
   <%= form.submit "Enviar", class: 'btn btn-primary' %>
  
 <% end %>

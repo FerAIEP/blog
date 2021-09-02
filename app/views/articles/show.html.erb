@@ -2,7 +2,9 @@
 
 <%#= image_tag('office.jpg', width: '150px', height: '150px', class: 'rounded', alt: 'office') %>
 <%# Alojar las images dentro de app/assets/images/  %>
-
+<% if @article.image.attached? %>
+  <%= image_tag(url_for(@article.photo), width: 300, height: 300) %>
+<% end %>
 <p><strong>Titulo</strong></p>
 <p><%= @article.title %></p>
 
